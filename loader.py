@@ -54,7 +54,9 @@ def random_mini_batches(X, Y, mini_batch_size=64, seed=0):
     permutation = list(np.random.permutation(m))
     shuffled_X = X[:, permutation]
     shuffled_Y = Y[:, permutation].reshape((Y.shape[0], m))
-
+    
+    print(shuffled_X)
+    
     # Step 2: Partition (shuffled_X, shuffled_Y). Minus the end case.
     # number of mini batches of size mini_batch_size in your partitionning
     num_complete_minibatches = math.floor(m / mini_batch_size)
