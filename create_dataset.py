@@ -14,12 +14,12 @@ full_dest_path = 'data/dogsvcats.hdf5'
 sample_dest_path = 'data/dogsvcats-sample.hdf5'
 
 # Where the HDF5 file is going - Full
-# hdf_path = full_dest_path
-# cat_dog_train_path = full_source_path
+hdf_path = full_dest_path
+cat_dog_train_path = full_source_path
 
 # Where the HDF5 file is going - Sample
-hdf_path = sample_dest_path
-cat_dog_train_path = sample_source_path
+#hdf_path = sample_dest_path
+#cat_dog_train_path = sample_source_path
 
 
 data_order = 'tf'

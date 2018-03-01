@@ -32,7 +32,7 @@ def convert_to_one_hot(Y, C):
     return Y
 
 
-def random_mini_batches(X, Y, mini_batch_size=64, seed=0):
+def random_mini_batches(X, Y, mini_batch_size=64):
     """
     Creates a list of random minibatches from (X, Y)
 
@@ -48,12 +48,12 @@ def random_mini_batches(X, Y, mini_batch_size=64, seed=0):
 
     m = X.shape[1]                  # number of training examples
     mini_batches = []
-    np.random.seed(seed)
+    #np.random.seed(seed)
 
     # Step 1: Shuffle (X, Y)
-    permutation = list(np.random.permutation(m))
-    shuffled_X = X[:, permutation]
-    shuffled_Y = Y[:, permutation].reshape((Y.shape[0], m))
+    #permutation = list(np.random.permutation(m))
+    shuffled_X = X
+    shuffled_Y = Y.reshape((Y.shape[0], m))
 
     # Step 2: Partition (shuffled_X, shuffled_Y). Minus the end case.
     # number of mini batches of size mini_batch_size in your partitionning
